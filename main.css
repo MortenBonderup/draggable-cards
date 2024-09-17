@@ -1,0 +1,206 @@
+
+/* I'm gonna change the code to use grid intead of flex-box but the principle is the same */
+/* The problem is on line  62 */
+
+:root {
+  --background-color-blueCard: rgb(216, 247, 255);
+  --background-color-yellowCard: rgb(245, 253, 119);
+   --background-color-greenCard: rgb(119, 253, 155);
+  --card-height: 260px;
+  --card-width: 430px;
+}
+
+
+body {
+  background-image: url("resources/bg 1.png");
+  padding: 0;
+  margin: 0;
+}
+
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url(resources/Eskool-Regular.ttf);
+}
+
+#cardBlue {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--background-color-blueCard);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 30px;
+  position: fixed;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 4;
+  -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+  box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+}
+
+#cardYellow {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--background-color-yellowCard);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 30px;
+  position: fixed;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* I just commented out the line below? Do you need it? */
+  /* transform: translate(10px, 10px);  here is the problem    */
+  z-index: 3;
+  -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+  box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+}
+
+#cardGreen {
+  width: var(--card-width);
+  height: var(--card-height);
+  background-color: var(--background-color-greenCard);
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 30px;
+  position: fixed;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* transform: translate(10px, 10px);  here is the problem    */
+  z-index: 2;
+  -webkit-box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+  box-shadow: 6px 8px 17px -8px rgba(0, 0, 0, 0.48);
+}
+
+#p1 {
+  font-family: "CustomFont";
+  font-size: 32px;
+  margin: 0;
+  letter-spacing: 3.5px;
+}
+
+
+#Hi_section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#HiTextWrap {
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+#ig_handle {
+  font-family: "CustomFont";
+  margin: 0;
+  margin-top: 9px;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+}
+#longText {
+  font-family: "CustomFont";
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  word-break: normal;
+}
+#longTextWrap {
+  width: 270px;
+  height: 114px;
+}
+#BottomTextWrap {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+#socials {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#instagramText {
+  font-family: "CustomFont";
+  margin: 0;
+  margin-left: 10px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  word-break: normal;
+}
+#linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#linkedintext {
+  font-family: "CustomFont";
+  margin: 0;
+  margin-left: 10px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  word-break: normal;
+}
+#facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#facebooktext {
+  font-family: "CustomFont";
+  margin: 0;
+  margin-left: 10px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  word-break: normal;
+}
+
+.wobble-hor-bottom {
+  -webkit-animation: wobble-hor-bottom 1s infinite;
+  animation: wobble-hor-bottom 1s infinite;
+}
+
+@keyframes wobble-hor-bottom {
+  0% {
+    transform: rotate(0) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(1deg) translate3d(1px, 0, 0);
+  }
+  50% {
+    transform: rotate(-1deg) translate3d(0, -1px, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(-1px, 0, 0);
+  }
+  100% {
+    transform: rotate(-1deg) translate3d(-1px, -1px, 0);
+  }
+}
+
+
